@@ -1,7 +1,7 @@
 var chartCtx = document.getElementById("chart").getContext("2d");
 var chartAxisCtx = document.getElementById("chartAxis").getContext("2d");
 
-var days = Object.keys(data['Weekly Time Series']).slice(0, 300).reverse();
+var days = Object.keys(data['Weekly Time Series']).slice(0, 30).reverse();
 var processedData = {
   open: [],
   high: [],
@@ -78,4 +78,4 @@ for (var i = 10; i < days.length; i++) {
   chart.data.datasets[3].data.push(processedData.close[i]);
 }
 
-document.querySelector('.chartAreaWrapperInner').style.width = '8000px';
+document.querySelector('.chartAreaWrapperInner').style.width = '4000px';
